@@ -7,10 +7,10 @@ import java.util.ArrayList;
 
 /**
  * @author Caroline
- * @version 1.0 copy data from a file (:1 string per line) without any
- *          treatment (unordered, duplications,...)
+ * @version 1.0 copy data from a file (:1 string per line) without any treatment
+ *          (unordered, duplications,...)
  */
-public class ReadSymptomDataFromFile implements ISymptomReader{
+public class ReadSymptomDataFromFile implements ISymptomReader {
 	/**
 	 * @param filepath : filepath of a list of symptoms
 	 **/
@@ -26,6 +26,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader{
 	 * 
 	 * @return ArrayList<String>
 	 */
+	@Override
 	public ArrayList<String> getSymptoms() {
 		ArrayList<String> symptomList = new ArrayList<String>();
 
