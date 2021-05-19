@@ -17,7 +17,8 @@ public class AnalyticsCounter implements ISymptomReader{
 	static final String symptomsInputFilePath = "Project02Eclipse/symptoms.txt";
 	static final String symptomsOutputFilePath = "Project02Eclipse/results.out";
 
-	public ArrayList<String> getSymptomList() {
+	@Override
+	public ArrayList<String> getSymptoms() {
 
 		/**
 		 * read data from a file (: 1 string per line) an add them one by one to a
@@ -30,7 +31,7 @@ public class AnalyticsCounter implements ISymptomReader{
 		return symptomList;
 	}
 
-	public TreeMap<String, Integer> getSymptomAndOccurrencesMap(ArrayList<String> symptomList) {
+	public TreeMap<String, Integer> getAnalyticsCounter(ArrayList<String> symptomList) {
 
 		/**
 		 * convert an unordered ArrayList with duplications into TreeMap : keys :
@@ -52,11 +53,5 @@ public class AnalyticsCounter implements ISymptomReader{
 		WriteSortedSymptomsToFile writer = new WriteSortedSymptomsToFile(symptomAndOccurrencesMap,
 				symptomsOutputFilePath);
 		writer.saveSortedSymptoms();
-	}
-
-	@Override
-	public ArrayList<String> getSymptoms() {
-		// TODO Auto-generated method stub
-		return null;
 	}
 }

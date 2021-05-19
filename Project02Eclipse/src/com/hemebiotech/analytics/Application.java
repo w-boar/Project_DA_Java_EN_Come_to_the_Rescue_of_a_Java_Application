@@ -19,14 +19,14 @@ public class Application {
 		 * (1) read data from a file symptoms.txt (1 symptom per line)
 		 */
 		ArrayList<String> symptomList = new ArrayList<String>();
-		symptomList = aCounters.getSymptomList();
+		symptomList = aCounters.getSymptoms();
 
 		/**
 		 * 2) sort the information to obtain a TreeMap (key: symptom name, value:
 		 * occurrences number)
 		 */
 		TreeMap<String, Integer> symptomAndOccurrencesMap = new TreeMap<String, Integer>();
-		symptomAndOccurrencesMap = aCounters.getSymptomAndOccurrencesMap(symptomList);
+		symptomAndOccurrencesMap = aCounters.getAnalyticsCounter(symptomList);
 
 		/**
 		 * (3) export the result to a file results.out
