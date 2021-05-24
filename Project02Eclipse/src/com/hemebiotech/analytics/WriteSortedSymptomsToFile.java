@@ -42,14 +42,16 @@ public class WriteSortedSymptomsToFile {
 				writer.write(entry.getKey() + ": " + entry.getValue());
 				writer.newLine();
 			}
-			writer.close();
 		}
 
-		/**
-		 * @throws IOException
-		 */
 		catch (IOException e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				writer.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }

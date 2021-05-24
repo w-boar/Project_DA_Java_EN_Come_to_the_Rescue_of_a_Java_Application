@@ -9,7 +9,7 @@ import java.util.TreeMap;
  *          2.sort the list (symptoms + occurrences) 3.save the sorted list
  */
 
-public class AnalyticsCounter implements ISymptomReader{
+public class AnalyticsCounter {
 	/**
 	 * @param path of the file containing the symptoms
 	 * @param path of the file containing the result (ordered list)
@@ -17,7 +17,6 @@ public class AnalyticsCounter implements ISymptomReader{
 	static final String symptomsInputFilePath = "Project02Eclipse/symptoms.txt";
 	static final String symptomsOutputFilePath = "Project02Eclipse/results.out";
 
-	@Override
 	public ArrayList<String> getSymptoms() {
 
 		/**

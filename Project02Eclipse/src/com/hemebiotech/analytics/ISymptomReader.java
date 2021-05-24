@@ -1,5 +1,6 @@
 package com.hemebiotech.analytics;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -17,6 +18,7 @@ public interface ISymptomReader {
 	 * 
 	 * @return a raw listing of all Symptoms obtained from a data source, duplicates
 	 *         are possible/probable
+	 * @throws IOException 
 	 */
 	public ArrayList<String> getSymptoms();
 }
